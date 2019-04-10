@@ -4,7 +4,7 @@ import binascii
 def padding(msg):
     res = msg
     l = 16 - len(msg) % 16
-    res = res + b'0'*l
+    res = res + b'\0'*l
     return res
 def encrypt(msg, key):
     assert len(key) == 16
